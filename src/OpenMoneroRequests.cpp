@@ -616,9 +616,9 @@ OpenMoneroRequests::get_unspent_outs(
 
     string xmr_address;
     string view_key;
-    uint64_t mixin {4};
+    uint64_t mixin {48};
     bool use_dust {false};
-    uint64_t dust_threshold {1000000000};
+    uint64_t dust_threshold {10000000};
     uint64_t amount {0};
 
     try
@@ -1896,7 +1896,7 @@ OpenMoneroRequests::get_version(
         {"last_git_commit_hash", string {GIT_COMMIT_HASH}},
         {"last_git_commit_date", string {GIT_COMMIT_DATETIME}},
         {"git_branch_name"     , string {GIT_BRANCH_NAME}},
-        {"monero_version_full" , string {MONERO_VERSION_FULL}},
+        {"monero_version_full" , string {SUMOKOIN_VERSION_FULL}},
         {"api"                 , OPENMONERO_RPC_VERSION},
         {"testnet"             , current_bc_status->get_bc_setup().net_type
                     == network_type::TESTNET},
