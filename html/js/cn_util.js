@@ -35,7 +35,7 @@ var cnUtil = (function(initConfig) {
 
     var HASH_STATE_BYTES = 200;
     var HASH_SIZE = 32;
-    var ADDRESS_CHECKSUM_SIZE = 4;
+    var ADDRESS_CHECKSUM_SIZE = 4; // ??? Check the address checksum size if it corresponds to sumo's dont know if it affects address validator and giving the transmit error
     var INTEGRATED_ID_SIZE = 8;
     var ENCRYPTED_PAYMENT_ID_TAIL = 141;
     var CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = config.addressPrefix;
