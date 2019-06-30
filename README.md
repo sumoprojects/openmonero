@@ -1,21 +1,29 @@
 1. Compile Sumo with 
+
 git clone --recursive https://github.com/sumoprojects/sumokoin
+
 mv sumokoin monero // so we dont have to adjust cmake files
+
 cd monero
+
 USE_SINGLE_BUILDDIR=1 make
 
 2. Install sql
+
 sudo apt install libmysql++-dev
 
 3. Install lcurl-openssl
+
 sudo apt install libcurl4-openssl-dev
 
 4. Install hidapi
+
 sudo apt install libhidapi-dev
 
 cd ..
 
 5. Clone the openmonero repo
+
 git clone --recursive https://github.com/sumoprojects/openmonero.git
 
 7. Update submodules and build openmonero
@@ -30,35 +38,46 @@ git submodule foreach --recursive git checkout master
 
 git submodule foreach --recursive git pull --ff-only origin master
 
-// Goto /root/openmonero/html/js edit the file config.js and at the second line // apiUrl: "http://YOUR_PUBLIC_IP_HERE:1984/", // 
+Goto /root/openmonero/html/js edit the file config.js and at the second line // apiUrl: "http://YOUR_PUBLIC_IP_HERE:1984/", // 
+
 add your public ip e.g. http://122.213.161.130:1984/  
-save the file //
+
+save the file 
 
 mkdir build && cd build
 
 cmake ..
+
+make
 
 8. Install docker images
 
 apt  install docker.io
 
 //database//
+
 docker run --name ommariadb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mariadb
 
 //niginx//
+
 docker run --name omhtml -p 80:80 -v /root/openmonero/html:/usr/share/nginx/html:ro -d nginx
 
 //PhpMyAdmin// optional
+
 docker run --name myadmin -d --link ommariadb:db -p 8080:80 phpmyadmin/phpmyadmin
+
 // You' ll find the login page at http://Your_public_ip:8080 //
 
 9. Run sumokoind
 
 10. run openmonero
+
 cd openmonero
+
 ./openmonero
 
 The wallet is now running at your public ip
+
 (Login/add to an existing sumo wallet by deleting the last word of the seeds - the second checksum)
 
 # OpenMonero - a fully open sourced implementation of MyMonero backend
