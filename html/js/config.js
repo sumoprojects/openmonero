@@ -1,6 +1,6 @@
 var config = {
     //apiUrl: "http://0.0.0.0:1984/",
-    apiUrl: "http://YOUR_PUBLIC_IP_HERE:1984/",
+    apiUrl: "http://167.71.167.215:1984/",
     mainnetExplorerUrl: "https://explorer.sumokoin.com/",
     testnetExplorerUrl: "https://explorer.sumokoin.com/",
     stagenetExplorerUrl: "https://explorer.sumokoin.com/",
