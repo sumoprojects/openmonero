@@ -2,9 +2,9 @@
   "daemon-url" :
   {
     "_comment" : "RPC urls to monero deamon",
-    "mainnet"  : "http://127.0.0.1:18081",
-    "testnet"  : "http://127.0.0.1:28081",
-    "stagenet" : "http://127.0.0.1:38081"
+    "mainnet"  : "http://127.0.0.1:19734",
+    "testnet"  : "http://127.0.0.1:29734",
+    "stagenet" : "http://127.0.0.1:39734"
   },
   "blockchain-path" :
   {
@@ -33,23 +33,24 @@
   },
   "wallet_import" :
   {
-    "_comment": "if fee is 0, then importing is free. fee is in base 1e12, e.g., 0.1 xmr is 0.1 x 1e12 = 100000000000",
-    "fee"     : 0,
+    "_comment": "if fee is 0, then importing is free. fee is in base 1e9, e.g., 0.1 sumo is 0.1 x 1e9 = 100000000",
+    "fee"     : 0, //keep fee to zero for the time being
     "testnet" :
     {
-      "address" : "9tzmPMTViHYM3z6NAgQni1Qm1Emzxy5hQFibPgWD3LVTAz91yok5Eni1pH6zKhBHzpTU15GZooPHSGHXFvFuXEdmEG2sWAZ",
-      "viewkey" : "ae6184287ca791609844f140b8502ccfa2223c04c8699cf31fcd0af1f1d0be08"
+    "_comment": "if fee is 0, then importing is free. fee is in base 1e9, e.g., 0.1 sumo is 0.1 x 1e9 = 100000000",
+      "address" : "Sutoo3u1ZnfVeYyf2Mu9GuRGevYkT65FuC9RoptT8ASJ8pjq1pAthhdR9dXKTWxvqi5hHgM9axP6vDsJqHaWTcriSgy5nRDweb8", // random address
+      "viewkey" : "cbd51ebc90604cadceee0ea51c1137cdd71583974cedd189e21354af9995c2e7"
     },
     "mainnet" :
     {
-      "_comment": "these are official monero project donation address and viewkey. change it to yours",
-      "address" : "44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A",
-      "viewkey" : "f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501"
+      "_comment": "",
+      "address" : "Sumoo3u1ZnfVeYyf2Mu9GuRGevYkT65FuC9RoptT8ASJ8pjq1pAthhdR9dXKTWxvqi5hHgM9axP6vDsJqHaWTcriSgy5nRDweb8", // that's a working address 
+      "viewkey" : "cbd51ebc90604cadceee0ea51c1137cdd71583974cedd189e21354af9995c2e7"
     },
     "stagenet" :
     {
-      "address" : "53mqDDKtVkib8inMa41HuNJG4tj9CcaNKGr6EVSbvhWGJdpDQCiNNYBUNF1oDb8BczU5aD68d3HNKXaEsPq8cvbQE2FBkTS",
-      "viewkey" : "53c5850e895122574c53a4f952c726be3fe22bcd2b08f4bfed8946d887cc950b"
+      "address" : "Sutoo3u1ZnfVeYyf2Mu9GuRGevYkT65FuC9RoptT8ASJ8pjq1pAthhdR9dXKTWxvqi5hHgM9axP6vDsJqHaWTcriSgy5nRDweb8", // random address
+      "viewkey" : "cbd51ebc90604cadceee0ea51c1137cdd71583974cedd189e21354af9995c2e7"
     }
   },
   "refresh_block_status_every_seconds" : 10,
