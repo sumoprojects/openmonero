@@ -19,7 +19,7 @@ thinwalletCtrls.controller('VersionCtrl', function ($scope, $http, ApiCalls) {
             $scope.version = "Open Monero version (api): "
                 + git_branch_name + "-" + last_git_commit_date + "-" + last_git_commit_hash
                 + " (" + api_major + "." + api_minor + ")"
-                + "  | Monero version: " + monero_version_full
+                + "  | Sumokoin version: " + monero_version_full
                 + "  | Blockchain height: " + response.data.blockchain_height
 
         }, function(response) {
