@@ -1,6 +1,5 @@
 var config = {
     apiUrl: "http://YOUR_PUBLIC_IP_HERE:1984/",
-    //apiUrl: "http://127.0.0.1:1984/",
     mainnetExplorerUrl: "https://explorer.sumokoin.com/",
     testnetExplorerUrl: "https://explorer.sumokoin.com/",
     stagenetExplorerUrl: "https://explorer.sumokoin.com/",
@@ -11,7 +10,7 @@ var config = {
     coinSymbol: 'SUMO',
     openAliasPrefix: "sumo",
     coinName: 'Sumokoin',
-    coinUriPrefix: 'sumokoin:',
+    coinUriPrefix: 'sumo:',
     addressPrefix: 0x2bb39a,
     integratedAddressPrefix: 0x29339a,
     subAddressPrefix: 0x8319a,
