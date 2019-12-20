@@ -1,4 +1,4 @@
 [submodule "src/xmregcore"]
 	path = src/xmregcore
-	url = https://github.com/sumogr/xmregcore
+	url = https://github.com/sumoprojects/xmregcore
     branch = release_v13
