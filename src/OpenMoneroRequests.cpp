@@ -876,7 +876,7 @@ OpenMoneroRequests::get_random_outs(
         return;
     };
 
-    if (count > 41)
+    if (count > 241)
     {
         OMERROR << "Request ring size too big" << '\n';
         j_response["status"] = "error";
