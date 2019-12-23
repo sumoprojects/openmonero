@@ -98,7 +98,7 @@ thinwalletCtrls.controller('VanityAddressCtrl', function ($scope) {
     $scope.toggleGeneration = function () {
         $scope.running = !$scope.running;
         if ($scope.running) {
-            if (!$scope.prefix || $scope.prefix[0] !== '4') {
+            if (!$scope.prefix || $scope.prefix[0] !== 'S') {
                 $scope.running = false;
                 return;
             }
