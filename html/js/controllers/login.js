@@ -41,13 +41,13 @@ thinwalletCtrls.controller("LoginCtrl", function($scope, $location, AccountServi
 
     if (config.nettype == 1) {
         // just some dummy account, as not to fill login form every time.
-        $scope.mnemonic = "agenda shrugged liquid extra mundane phone nomad oust duckling sifting pledge loyal royal urban skater bawled gusts bounced boil violin mumble gags axle sapling shrugged";
+        $scope.mnemonic = "agenda shrugged liquid extra mundane phone nomad oust duckling sifting pledge loyal royal urban skater bawled gusts bounced boil violin mumble gags axle sapling shrugged odometer";
     } else if (config.nettype == 2) {
         // just some dummy account, as not to fill login form every time.
-        $scope.mnemonic = "peaches purged gossip either gyrate organs asked ability autumn inexact coffee rays avidly fountain foxes wrist goldfish masterful anecdote sulking masterful science beyond coffee coffee";
+        $scope.mnemonic = "peaches purged gossip either gyrate organs asked ability autumn inexact coffee rays avidly fountain foxes wrist goldfish masterful anecdote sulking masterful science beyond coffee coffee motherly";
     } else {
-        $scope.address = "44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A";
-        $scope.view_key = "f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501" ;
+        $scope.address = "Sumoo41eD4bU1n67JdSDupf9jzsrRmtBJLo9JhAyim3P1higfLj1ax8H5uKPH7KTw5DzxLerNzUpkHycEBxU2rA1hCgiVXvRbkV";
+        $scope.view_key = "f8a64477b170fafcadb3977f6b33475724b24db34f077e96194d3f32be73d607" ;
     }
 
 

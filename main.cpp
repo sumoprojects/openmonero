@@ -8,6 +8,7 @@
 #include <iostream>
 #include <memory>
 #include <cstdlib>
+#include <chrono>
 
 
 using namespace std;
@@ -301,6 +302,7 @@ if (config_json["ssl"]["enable"])
     Uri dh_pem  = Uri(config_json["ssl"]["dh-pem"].get<string>());
 
     ssl_settings->set_http_disabled(true);
+    ssl_settings->set_bind_address("0.0.0.0");
     ssl_settings->set_port(app_port);
     ssl_settings->set_private_key(ssl_key);
     ssl_settings->set_certificate(ssl_crt);
@@ -310,15 +312,19 @@ if (config_json["ssl"]["enable"])
 
     // can check using: curl -k -v -w'\n' -X POST 'https://127.0.0.1:1984/get_version'
 
-    OMINFO << "Start the service at https://127.0.0.1:" << app_port;
+    OMINFO << "Start the service at https://0.0.0.0:" << app_port;
 }
 else
 {
+    settings->set_bind_address("0.0.0.0");
     settings->set_port(app_port);
     settings->set_default_header("Connection", "close");
 
-    OMINFO << "Start the service at http://127.0.0.1:" << app_port;
+    OMINFO << "Start the service at http://0.0.0.0:" << app_port;
 }
+
+std::chrono::milliseconds ms(std::chrono::milliseconds::max());
+settings->set_connection_timeout(ms); // high value
 
 // intercept basic termination requests,
 // including Ctrl+c
